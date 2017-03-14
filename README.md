@@ -11,4 +11,4 @@ The *brightness()* function controls the depth of the pixel (z), t may be necess
 Some openGL configuration were used to get some alpha blending effects.
 Processing 3.3
 
-https://youtu.be/kJyGPxi2mlw
+https://www.youtube.com/watch?v=kJyGPxi2mlw
