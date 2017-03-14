@@ -41,7 +41,8 @@ void draw() {
      gl.glBlendColor(0.0,0.0,1,0.8);
     
       gl.glDisable(GL.GL_DEPTH_TEST);
-      gl.glEnable(GL.GL_BLEND);      
+      gl.glEnable(GL.GL_BLEND);
+      //gl.glBlendFunc(GL.GL_SRC_ALPHA,GL.GL_ONE); // cambiado - antes
       gl.glBlendFunc(GL.GL_SRC_ALPHA, GL.GL_ONE_MINUS_SRC_ALPHA);
       
       pushMatrix();
@@ -55,7 +56,9 @@ void draw() {
         //rotateY(radians(mouseX/TWO_PI));
         translate(-width/2, -height, 0);
       }  
-
+      //rotateX(radians(-mouseY)); //rotateY -(mouseY
+      //translate(-width, -height, 0);
+      //int index = 0;
    
       for (int y = 0; y < video.height; y+=5) {  //antes 5
    
@@ -66,6 +69,7 @@ void draw() {
          
                     stroke(red(pixelValue*2), green(pixelValue*2), blue(pixelValue*3), 255); //255
          
+                    //vertex (x*2, y*2, (brightness(pixelValue)*2)-100);
                     vertex (x*2, y*2, -(brightness(pixelValue)*2));  //100                                          
             }
           endShape();   
@@ -81,4 +85,6 @@ void mouseClicked(){
   rotar = !rotar;
 }
 
-
+void keyPressed(){
+  rotar = !rotar;
+}
