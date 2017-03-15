@@ -1,3 +1,16 @@
+/*
+ Author: Rossana Guerra
+ Date: March 2017
+ Licence: MIT
+ 
+ webcam3D is free software: you can redistribute it and/or modify
+it under the terms of the MIT License as published by
+the Free Software Foundation.
+webcam3D is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+MIT License for more details.
+*/
 
 import processing.opengl.*;
 import processing.video.*;
@@ -13,9 +26,7 @@ boolean rotar = false;
  
 void setup() {
     size(1024, 768, OPENGL);
-    
-    //frameRate(30);
- 
+     
     video = new Capture(this, width, height);
     
     video.start();  
@@ -47,13 +58,13 @@ void draw() {
       pushMatrix();
       
       if (rotar){
-        translate(width/2, height, 0);
+        translate(width/2, height/2, 0);
         rotateZ(radians((mouseX-(width))));
         
         //rotateZ(radians(mouseX));
         rotateY(radians(-(mouseY-(height)))); //rotateY -(mouseY
         //rotateY(radians(mouseX/TWO_PI));
-        translate(-width/2, -height, 0);
+        translate(-width/2, -height/2, 0);
       }  
 
    
