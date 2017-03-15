@@ -7,7 +7,7 @@ Usa configuración openGL para lograr algunos efectos de blending.
 Processing 3.3
 
 A simple example that transforms a simple webcam streaming into depth points images alike shapes.
-The *brightness()* function controls the depth of the pixel (z), it may be necessary to adjust it to suit it to lighing variations in order to get better results.
+The *brightness()* function controls the depth of the pixel (z), it may be necessary to adjust it to suit it lighing variations in order to get better results.
 Some openGL configuration were used to get some alpha blending effects.
 
 Processing 3.3
